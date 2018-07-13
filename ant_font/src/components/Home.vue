@@ -4,7 +4,7 @@
       <el-row>
       <el-col :span="24">
         <div class="grid-content bg-purple-dark">
-          <el-button type="text">登录</el-button>
+          <el-button type="text"><router-link to='/login' class='login'>登录</router-link></el-button>
           <span class="register">|</span>
           <el-button type="text">注册</el-button>
         </div>
@@ -147,6 +147,7 @@ export default {
     };
   },
   mounted (){
+    this.init_home();
    window.addEventListener('resize',function(){
       var width = document.body.clientWidth;
       if(width < 1000){
@@ -277,6 +278,9 @@ export default {
 }
 .right_one {
   padding-top: 3rem;
+}
+.login:visited {
+  color: #333;
 }
 </style>
 
